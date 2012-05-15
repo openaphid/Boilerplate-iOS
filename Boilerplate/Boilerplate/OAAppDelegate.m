@@ -17,6 +17,7 @@
 
 #import "OAAppDelegate.h"
 #import "OARootViewController.h"
+#import "OAGoogleAnalyticsBinding.h"
 
 @implementation OAAppDelegate
 
@@ -38,11 +39,14 @@
 	
 	[self.viewController.glViewController configBundleName:@"game.bundle" 
 																								 baseURL:[NSURL URLWithString:@"http://129.158.217.36:18080"] //Notes: please replace it with the address of your develop web server
-																						 developMode:YES];	//Sets to NO to disable "Develop Mode" 
+																						 developMode:NO];	//Sets to NO to disable "Develop Mode" 
 	
 	self.viewController.glViewController.supportedOrientations = OAOrientationPortrait;
 	[self.viewController.glViewController configGLViewPixelFormat:OAGLViewPixelFormatRGB565];
 	
+	[self.viewController.glViewController setScriptBinding:[[OAGoogleAnalyticsBinding new] autorelease]  
+                                                    name:@"gat" 
+                                                 iOSOnly:YES];
 	
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];

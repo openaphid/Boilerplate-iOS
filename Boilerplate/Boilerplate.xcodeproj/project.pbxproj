@@ -26,6 +26,10 @@
 		D611DF96154D3CB600E86E61 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D611DF90154D3CB600E86E61 /* Icon-Small@2x.png */; };
 		D611DF97154D3CB600E86E61 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D611DF91154D3CB600E86E61 /* Icon.png */; };
 		D611DF98154D3CB600E86E61 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D611DF92154D3CB600E86E61 /* Icon@2x.png */; };
+		D67BF4F01562851F0085945B /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67BF4EF1562851F0085945B /* libGoogleAnalytics.a */; };
+		D67BF4F5156285AB0085945B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D67BF4F3156285450085945B /* libsqlite3.dylib */; };
+		D67BF4F6156285AB0085945B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67BF4F11562853E0085945B /* CFNetwork.framework */; };
+		D67BF4F9156285DC0085945B /* OAGoogleAnalyticsBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = D67BF4F8156285DC0085945B /* OAGoogleAnalyticsBinding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,13 @@
 		D611DF90154D3CB600E86E61 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		D611DF91154D3CB600E86E61 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D611DF92154D3CB600E86E61 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D67BF4EB156285050085945B /* OABindingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OABindingProtocol.h; sourceTree = "<group>"; };
+		D67BF4EE1562851F0085945B /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		D67BF4EF1562851F0085945B /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		D67BF4F11562853E0085945B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D67BF4F3156285450085945B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D67BF4F7156285DC0085945B /* OAGoogleAnalyticsBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAGoogleAnalyticsBinding.h; sourceTree = "<group>"; };
+		D67BF4F8156285DC0085945B /* OAGoogleAnalyticsBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAGoogleAnalyticsBinding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,8 @@
 			files = (
 				D611DF84154D3A3900E86E61 /* libicucore.dylib in Frameworks */,
 				D611DF82154D3A3400E86E61 /* libstdc++.dylib in Frameworks */,
+				D67BF4F5156285AB0085945B /* libsqlite3.dylib in Frameworks */,
+				D67BF4F6156285AB0085945B /* CFNetwork.framework in Frameworks */,
 				D611DF80154D3A2E00E86E61 /* OpenGLES.framework in Frameworks */,
 				D611DF7E154D3A2800E86E61 /* QuartzCore.framework in Frameworks */,
 				D611DF5D154D395F00E86E61 /* UIKit.framework in Frameworks */,
@@ -71,6 +84,7 @@
 				D611DF61154D395F00E86E61 /* CoreGraphics.framework in Frameworks */,
 				D611DF79154D39B400E86E61 /* libAJ.a in Frameworks */,
 				D611DF7A154D39B400E86E61 /* libOpenAphid.a in Frameworks */,
+				D67BF4F01562851F0085945B /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +96,7 @@
 			children = (
 				D611DF7B154D39D700E86E61 /* game.bundle */,
 				D611DF73154D39B400E86E61 /* OpenAphid-Runtime */,
+				D67BF4ED1562851F0085945B /* GoogleAnalytics-1.4 */,
 				D611DF8C154D3BE400E86E61 /* Icons */,
 				D611DF62154D395F00E86E61 /* Boilerplate */,
 				D611DF5B154D395F00E86E61 /* Frameworks */,
@@ -102,6 +117,8 @@
 			children = (
 				D611DF83154D3A3900E86E61 /* libicucore.dylib */,
 				D611DF81154D3A3400E86E61 /* libstdc++.dylib */,
+				D67BF4F3156285450085945B /* libsqlite3.dylib */,
+				D67BF4F11562853E0085945B /* CFNetwork.framework */,
 				D611DF7F154D3A2E00E86E61 /* OpenGLES.framework */,
 				D611DF7D154D3A2800E86E61 /* QuartzCore.framework */,
 				D611DF5C154D395F00E86E61 /* UIKit.framework */,
@@ -116,6 +133,8 @@
 			children = (
 				D611DF6B154D395F00E86E61 /* OAAppDelegate.h */,
 				D611DF6C154D395F00E86E61 /* OAAppDelegate.m */,
+				D67BF4F7156285DC0085945B /* OAGoogleAnalyticsBinding.h */,
+				D67BF4F8156285DC0085945B /* OAGoogleAnalyticsBinding.m */,
 				D611DF63154D395F00E86E61 /* Supporting Files */,
 			);
 			path = Boilerplate;
@@ -138,6 +157,7 @@
 				D611DF74154D39B400E86E61 /* libAJ.a */,
 				D611DF75154D39B400E86E61 /* libOpenAphid.a */,
 				D611DF76154D39B400E86E61 /* OAConstants.h */,
+				D67BF4EB156285050085945B /* OABindingProtocol.h */,
 				D611DF77154D39B400E86E61 /* OAGLViewController.h */,
 				D611DF78154D39B400E86E61 /* OARootViewController.h */,
 			);
@@ -156,6 +176,15 @@
 				D611DF92154D3CB600E86E61 /* Icon@2x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		D67BF4ED1562851F0085945B /* GoogleAnalytics-1.4 */ = {
+			isa = PBXGroup;
+			children = (
+				D67BF4EE1562851F0085945B /* GANTracker.h */,
+				D67BF4EF1562851F0085945B /* libGoogleAnalytics.a */,
+			);
+			path = "GoogleAnalytics-1.4";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +258,7 @@
 			files = (
 				D611DF69154D395F00E86E61 /* main.m in Sources */,
 				D611DF6D154D395F00E86E61 /* OAAppDelegate.m in Sources */,
+				D67BF4F9156285DC0085945B /* OAGoogleAnalyticsBinding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +331,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../OpenAphid-Runtime\"",
+					"\"$(SRCROOT)/GoogleAnalytics-1.4\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
@@ -318,6 +349,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../OpenAphid-Runtime\"",
+					"\"$(SRCROOT)/GoogleAnalytics-1.4\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
@@ -344,6 +376,7 @@
 				D611DF72154D395F00E86E61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

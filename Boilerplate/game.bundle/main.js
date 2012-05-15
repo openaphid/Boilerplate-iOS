@@ -11,6 +11,13 @@ function initialize() {
 	scene.addChild(label);
 
 	director.runScene(scene);
+  
+  //Start Google Analytics
+  var gat = aphid.extios.gat; //Google Analytics is binded as aphid.extios.gat
+  gat.startTracker("UA-31741840-1", 10); //start a tracker
+  gat.trackPageView("main.js"); //track a page view
+  gat.trackEvent("JS", "initialize", null, -1); //track an event
+  gat.dispatch(); //dispatch now
 }
 
 aphid.js.onload = initialize;
