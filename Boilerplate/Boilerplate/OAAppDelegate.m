@@ -46,7 +46,7 @@
 	
 	[self.viewController.glViewController setScriptBinding:[[OAGoogleAnalyticsBinding new] autorelease]  
                                                     name:@"gat" 
-                                                 iOSOnly:YES];
+                                                 iOSOnly:NO];
 	
 	self.window.rootViewController = self.viewController;
 	[self.window makeKeyAndVisible];

@@ -20,7 +20,7 @@
 
 @implementation OAGoogleAnalyticsBinding
 
-- (void) startTrackerWithAccountID:(NSString*)accountID despatchPeriod:(int)period
+- (void) startTrackerWithAccountID:(NSString*)accountID dispatchPeriod:(int)period
 {
 	[[GANTracker sharedTracker] startTrackerWithAccountID:accountID dispatchPeriod:period delegate:nil];
 }
@@ -102,15 +102,9 @@
 	return [[GANTracker sharedTracker] dispatch];
 }
 
-- (BOOL)dispatchSynchronous:(NSTimeInterval)timeout
-{
-	return [[GANTracker sharedTracker] dispatchSynchronous:timeout];
-}
-
-
 - (void)bindSelectors:(OABindingMap *)bindingMap
 {
-	[bindingMap bindSelector:@selector(startTrackerWithAccountID:despatchPeriod:) 
+	[bindingMap bindSelector:@selector(startTrackerWithAccountID:dispatchPeriod:) 
                    forName:@"startTracker"];
   
 	[bindingMap bindSelector:@selector(stopTracker) 
@@ -148,9 +142,6 @@
   
 	[bindingMap bindSelector:@selector(dispatch) 
                    forName:@"dispatch"];
-  
-	[bindingMap bindSelector:@selector(dispatchSynchronous:) 
-                   forName:@"dispatchSynchronous"];
 }
 
 @end
