@@ -1,3 +1,7 @@
+The project has been DISCONTINUED. Please refer to the blog post for more details.
+
+[http://openaphid.github.com/blog/2013/01/14/openaphid-engine-v0-dot-2-1f-and-discontinuation-announcement/](http://openaphid.github.com/blog/2013/01/14/openaphid-engine-v0-dot-2-1f-and-discontinuation-announcement/)
+
 Boilerplate-iOS
 ===============
 
